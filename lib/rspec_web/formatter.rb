@@ -58,12 +58,15 @@ module RspecWeb
     
     def example_to_hash(example)
       {
+        :framework => :rspec,
         :started_at => example.metadata[:execution_result][:started_at].to_i,
         :finished_at => example.metadata[:execution_result][:finished_at].to_i,
         :run_time => example.metadata[:execution_result][:run_time],
         :file_path => example.metadata[:file_path],
         :line_number => example.metadata[:line_number],
-        :description => example.metadata[:full_description]
+        :description => example.metadata[:full_description],
+        :assertions => 0,
+        :exception => ''
       }
     end
   end
