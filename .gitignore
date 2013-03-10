@@ -2,3 +2,5 @@ pkg/
 .sass-cache/
 .DS_Store
 *.lock
+.idea/
+.rvmrc
